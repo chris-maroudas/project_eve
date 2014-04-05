@@ -21,6 +21,8 @@ gem 'choice'
 gem 'ancestry'
 gem 'rails_admin'
 gem 'mailcatcher'
+gem 'omniauth-steam'
+gem 'figaro'
 
 # Authorization / Authentication
 gem 'devise'
