@@ -8,6 +8,8 @@ gem 'rails', '3.2.16'
 gem 'pg'
 
 # Default
+gem 'pry'
+gem 'pry-rails'
 gem 'friendly_id'
 gem 'haml'
 gem 'haml-rails'
@@ -22,6 +24,7 @@ gem 'ancestry'
 gem 'rails_admin'
 gem 'mailcatcher'
 gem 'omniauth-steam'
+gem 'omniauth'
 gem 'figaro'
 
 # Authorization / Authentication

@@ -1,7 +1,10 @@
 ProjectEve::Application.routes.draw do
 
-  root to: "welcome#index"
   get "welcome/index"
+  post 'auth/steam/callback' => 'welcome#auth_callback'
+
+  root to: "welcome#index"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
