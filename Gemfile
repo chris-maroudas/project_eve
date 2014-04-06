@@ -7,9 +7,21 @@ gem 'rails', '3.2.16'
 
 gem 'pg'
 
-# Default
+
+# Debugging
+gem 'thin'
+gem 'quiet_assets'
+gem 'better_errors'
+gem 'meta_request'
+gem 'binding_of_caller'
+gem 'rails-footnotes'
+gem 'annotate'
+gem 'awesome_print'
+gem 'brakeman'
 gem 'pry'
 gem 'pry-rails'
+
+# Default
 gem 'friendly_id'
 gem 'haml'
 gem 'haml-rails'

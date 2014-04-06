@@ -13,6 +13,7 @@ class WelcomeController < ApplicationController
                                :steam_profile_link => auth.info.urls.Profile,
                                :friend_list => auth.info.urls.FriendList
     }
+
     redirect_to root_url
   end
 

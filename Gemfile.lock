@@ -30,12 +30,33 @@ GEM
       multi_json (~> 1.0)
     ancestry (2.0.0)
       activerecord (>= 3.0.0)
+    annotate (2.6.3)
+      activerecord (>= 2.3.0)
+      rake (>= 0.8.7)
     arel (3.0.3)
+    awesome_print (1.2.0)
     babosa (0.3.11)
     bcrypt (3.1.7)
+    better_errors (1.1.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
+    brakeman (2.4.3)
+      erubis (~> 2.6)
+      fastercsv (~> 1.5)
+      haml (>= 3.0, < 5.0)
+      highline (~> 1.6.20)
+      multi_json (~> 1.2)
+      ruby2ruby (~> 2.0.5)
+      ruby_parser (~> 3.4.0)
+      sass (~> 3.0)
+      slim (>= 1.3.6, < 3.0)
+      terminal-table (~> 1.4)
     builder (3.0.4)
+    callsite (0.0.11)
     cancan (1.6.10)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
@@ -55,6 +76,7 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     daemons (1.1.9)
+    debug_inspector (0.0.2)
     devise (3.2.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -64,6 +86,7 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
+    fastercsv (1.5.5)
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
@@ -82,6 +105,7 @@ GEM
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
     hashie (2.0.5)
+    highline (1.6.21)
     hike (1.2.3)
     i18n (0.6.9)
     journey (1.0.4)
@@ -107,6 +131,10 @@ GEM
       skinny (~> 0.2.3)
       sqlite3 (~> 1.3)
       thin (~> 1.5.0)
+    meta_request (0.2.8)
+      callsite
+      rack-contrib
+      railties
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_magick (3.7.0)
@@ -134,9 +162,13 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    quiet_assets (1.0.2)
+      railties (>= 3.1, < 5.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-openid (1.3.1)
       rack (>= 1.1.0)
       ruby-openid (>= 2.1.8)
@@ -157,6 +189,8 @@ GEM
       activesupport (= 3.2.16)
       bundler (~> 1.0)
       railties (= 3.2.16)
+    rails-footnotes (4.0.0)
+      rails (>= 3.2)
     rails_admin (0.4.9)
       bootstrap-sass (~> 2.2)
       builder (~> 3.0)
@@ -184,12 +218,18 @@ GEM
       json (~> 1.4)
     remotipart (1.2.1)
     ruby-openid (2.5.0)
+    ruby2ruby (2.0.8)
+      ruby_parser (~> 3.1)
+      sexp_processor (~> 4.0)
+    ruby_parser (3.4.1)
+      sexp_processor (~> 4.1)
     safe_yaml (0.9.7)
     sass (3.3.4)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    sexp_processor (4.4.3)
     simple_form (2.1.1)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -200,6 +240,9 @@ GEM
     skinny (0.2.3)
       eventmachine (~> 1.0.0)
       thin (~> 1.5.0)
+    slim (2.0.2)
+      temple (~> 0.6.6)
+      tilt (>= 1.3.3, < 2.1)
     slop (3.5.0)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -208,6 +251,8 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.9)
     subexec (0.2.3)
+    temple (0.6.7)
+    terminal-table (1.4.5)
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -230,7 +275,12 @@ PLATFORMS
 
 DEPENDENCIES
   ancestry
+  annotate
+  awesome_print
   babosa
+  better_errors
+  binding_of_caller
+  brakeman
   cancan
   carrierwave
   choice
@@ -245,14 +295,18 @@ DEPENDENCIES
   jquery-rails
   kaminari
   mailcatcher
+  meta_request
   mini_magick
   omniauth
   omniauth-steam
   pg
   pry
   pry-rails
+  quiet_assets
   rails (= 3.2.16)
+  rails-footnotes
   rails_admin
   sass-rails (~> 3.2.3)
   simple_form
+  thin
   uglifier (>= 1.0.3)
