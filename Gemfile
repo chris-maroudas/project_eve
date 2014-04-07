@@ -38,6 +38,8 @@ gem 'mailcatcher'
 gem 'omniauth-steam'
 gem 'omniauth'
 gem 'figaro'
+gem 'mailman'
+gem 'truncate_html'
 
 # Authorization / Authentication
 gem 'devise'
