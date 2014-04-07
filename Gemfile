@@ -5,8 +5,8 @@ gem 'rails', '3.2.16'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# Database
 gem 'pg'
-
 
 # Debugging
 gem 'thin'
@@ -41,6 +41,7 @@ gem 'figaro'
 gem 'mailman'
 gem 'truncate_html'
 gem 'capistrano'
+gem 'globalize', '~> 3.1.0'
 
 # Authorization / Authentication
 gem 'devise'

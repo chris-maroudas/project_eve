@@ -15,7 +15,6 @@
 /tmp
 
 # Custom additions
-/config/application.yml
 .idea
 /config/database.yml
 
