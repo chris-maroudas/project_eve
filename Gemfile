@@ -40,6 +40,7 @@ gem 'omniauth'
 gem 'figaro'
 gem 'mailman'
 gem 'truncate_html'
+gem 'capistrano'
 
 # Authorization / Authentication
 gem 'devise'
@@ -71,7 +72,6 @@ gem 'jquery-rails'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'
