@@ -1,5 +1,7 @@
 ProjectEve::Application.routes.draw do
 
+  devise_for :users
+
   get "welcome/index"
   post 'auth/steam/callback' => 'welcome#auth_callback'
 

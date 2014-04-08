@@ -12,7 +12,14 @@
     = csrf_meta_tag
 
   %body
-
-    = yield
+    .row
+      .twelve-columns
+        - if user_signed_in? && current_user.steam_user == true
+          Steam user
+        - elsif user_signed_in?
+          Devise user
+        .notice= notice
+        .alert= alert
+        = yield
 
     = javascript_include_tag "application"

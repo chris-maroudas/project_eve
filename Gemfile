@@ -17,7 +17,6 @@ gem 'binding_of_caller'
 gem 'rails-footnotes'
 gem 'annotate'
 gem 'awesome_print'
-gem 'brakeman'
 gem 'pry'
 gem 'pry-rails'
 
@@ -42,6 +41,7 @@ gem 'mailman'
 gem 'truncate_html'
 gem 'capistrano'
 gem 'globalize', '~> 3.1.0'
+gem 'html2haml'
 
 # Authorization / Authentication
 gem 'devise'
