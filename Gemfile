@@ -42,6 +42,8 @@ gem 'truncate_html'
 gem 'capistrano'
 gem 'globalize', '~> 3.1.0'
 gem 'html2haml'
+gem 'chartkick'
+gem 'groupdate'
 
 # Authorization / Authentication
 gem 'devise'

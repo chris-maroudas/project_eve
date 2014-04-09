@@ -61,6 +61,7 @@ GEM
     celluloid-io (0.15.0)
       celluloid (>= 0.15.0)
       nio4r (>= 0.5.0)
+    chartkick (1.2.4)
     choice (0.1.6)
     ckeditor (4.0.11)
       mime-types
@@ -98,6 +99,8 @@ GEM
     globalize (3.1.0)
       activemodel (>= 3.1.0, < 4.0.0)
       activerecord (>= 3.1.0, < 4.0.0)
+    groupdate (2.1.0)
+      activerecord (>= 3.0.0)
     haml (4.0.5)
       tilt
     haml-rails (0.4)
@@ -309,6 +312,7 @@ DEPENDENCIES
   cancan
   capistrano
   carrierwave
+  chartkick
   choice
   ckeditor
   coffee-rails (~> 3.2.1)
@@ -317,6 +321,7 @@ DEPENDENCIES
   foundation-rails
   friendly_id
   globalize (~> 3.1.0)
+  groupdate
   haml
   haml-rails
   html2haml
