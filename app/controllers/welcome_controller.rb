@@ -9,7 +9,7 @@ class WelcomeController < ApplicationController
   def index
     @matchlist = []
     if user_signed_in? && current_user.steam_user?
-      @matchlist = api_get_users_recent_matches(current_user)
+      @matchlist = Users::get_recent_matches(current_user)
     end
   end
 
@@ -54,14 +54,6 @@ class WelcomeController < ApplicationController
       uid: auth.uid,
       profile_url: auth.info.urls.Profile
     }
-  end
-
-  # STEAM API functions
-
-  def api_get_users_recent_matches(user)
-    url = URI.parse("https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/v001/?key=#{ENV['STEAM_WEB_API_KEY']}&account_id=#{user.steam_metadata.uid}")
-    response = Net::HTTP::get(url)
-    JSON.load(response)['result']['matches'] || []
   end
 
 end
