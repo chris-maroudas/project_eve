@@ -5,9 +5,16 @@
 %h2
   USERS
 = image_tag current_user.image_url rescue nil
-%br
-= link_to current_user.nickname, session[:steam_user][:steam_profile_link] rescue nil
+= link_to current_user.nickname, current_user.steam_metadata.profile_url rescue nil
 %br
 = link_to "Sign out", destroy_user_session_path, method: :delete
 = link_to "Sign in", new_user_session_path
 = link_to "Sign up", new_user_registration_path
+
+%br
+Match list!
+
+%ul
+  - @matchlist.each do |match|
+    %li
+      = Date.strptime(match['start_time'].to_s, '%s').to_s + " / " + match['match_id'].to_s

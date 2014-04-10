@@ -16,6 +16,8 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  nickname               :string(255)
+#  image_url              :string(255)
+#  steam_user             :boolean
 #
 
 require 'test_helper'

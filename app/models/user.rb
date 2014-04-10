@@ -16,6 +16,8 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  nickname               :string(255)
+#  image_url              :string(255)
+#  steam_user             :boolean
 #
 
 class User < ActiveRecord::Base
@@ -27,4 +29,16 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :nickname, :image_url, :steam_user
   # attr_accessible :title, :body
+
+  has_one :steam_metadata, dependent: :destroy
+
+  def save_with_metadata(metadata)
+    save
+    self.steam_metadata = SteamMetadata.new(metadata)
+  end
+
+  def has_steam_metadata?
+    steam_metadata.present?
+  end
+
 end

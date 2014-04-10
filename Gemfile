@@ -40,7 +40,7 @@ gem 'figaro'
 gem 'mailman'
 gem 'truncate_html'
 gem 'capistrano'
-gem 'globalize', '~> 3.1.0'
+gem 'globalize', '~> 3.1.0' # Specific need for Rails 3.2.16
 gem 'html2haml'
 gem 'chartkick'
 gem 'groupdate'
