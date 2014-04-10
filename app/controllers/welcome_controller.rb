@@ -1,5 +1,8 @@
+require 'eve_support'
+
 class WelcomeController < ApplicationController
-  require 'eve_support'
+  include EveSupport
+
   skip_before_filter :verify_authenticity_token, :only => :auth_callback
 
 
@@ -35,7 +38,7 @@ class WelcomeController < ApplicationController
   private
 
   def create_credentials(auth) # move to model?
-    generated_pass = EveSupport::Password::generate_random_pass
+    generated_pass = Password::generate_random_pass
     {
       nickname: auth.info['nickname'],
       email: (auth.info['nickname'] + auth.uid + '@eve.gr').downcase,
