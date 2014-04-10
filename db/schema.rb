@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140410041249) do
+ActiveRecord::Schema.define(:version => 20140410175042) do
 
   create_table "steam_metadata", :force => true do |t|
     t.string   "uid"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20140410041249) do
     t.string   "nickname"
     t.string   "image_url"
     t.boolean  "steam_user"
+    t.date     "birth_date"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
