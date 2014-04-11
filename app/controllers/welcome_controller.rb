@@ -11,6 +11,7 @@ class WelcomeController < ApplicationController
     if user_signed_in? && current_user.steam_user?
       @matchlist = Users::get_recent_matches(current_user.steam_metadata.uid)
       @match_details = Matches::get_match_details(@matchlist.last["match_id"])
+      @players = @match_details["result"]["players"]
     end
   end
 

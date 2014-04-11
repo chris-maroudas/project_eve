@@ -18,3 +18,29 @@ Match list!
   - @matchlist.each do |match|
     %li
       = Date.strptime(match['start_time'].to_s, '%s').to_s + " / " + match['match_id'].to_s
+
+
+%h2 Player stats
+
+%ul
+  - @players.each do |player|
+    %li
+      Hero:
+      = get_hero_name(player["hero_id"])
+      Kills:
+      = player["kills"]
+      Deaths:
+      = player["deaths"]
+      Assists:
+      = player["assists"]
+      Denies:
+      = player["denies"]
+      Gold / min
+      = player["gold_per_min"]
+      Xp / min
+      = player["xp_per_min"]
+      Level
+      = player["level"]
+      Items --->
+      - 0.upto(5) do |i|
+        = get_item_name(player["item_#{i}"])
