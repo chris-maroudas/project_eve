@@ -9,6 +9,7 @@ module SteamApi
     Net::HTTP::get(url)
   end
 
+  # Users API calls
   module Users
 
     def self.get_recent_matches(user_id) # Accept a user_id because of separation of concerns. This method should not know whether user has a steam metadata
@@ -18,6 +19,7 @@ module SteamApi
 
   end
 
+  # Matches API calls
   module Matches
 
     def self.get_match_details(match_id)
