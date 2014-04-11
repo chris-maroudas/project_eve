@@ -18,6 +18,7 @@
 #  nickname               :string(255)
 #  image_url              :string(255)
 #  steam_user             :boolean
+#  birth_date             :date
 #
 
 class User < ActiveRecord::Base
