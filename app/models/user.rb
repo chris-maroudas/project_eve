@@ -42,4 +42,8 @@ class User < ActiveRecord::Base
     steam_metadata.present?
   end
 
+  def age
+    ((Date.today - birth_date) / 365).to_i
+  end
+
 end
