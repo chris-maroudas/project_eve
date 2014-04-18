@@ -21,6 +21,7 @@
 #  birth_date             :date
 #
 
+
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -32,6 +33,10 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_one :steam_metadata, dependent: :destroy
+  has_and_belongs_to_many :assets
+
+
+  include Taggable
 
   def save_with_metadata(metadata)
     save
